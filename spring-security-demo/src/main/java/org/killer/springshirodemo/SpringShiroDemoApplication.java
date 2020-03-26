@@ -11,9 +11,17 @@ public class SpringShiroDemoApplication {
 
     @GetMapping("/test")
     public String test() {
-
         return "hello world!";
+    }
 
+    @GetMapping("/security/test")
+    public String securityTest() {
+        return "security hello world";
+    }
+
+    @GetMapping("login")
+    public String login() {
+        return "assume login";
     }
 
     public static void main(String[] args) {
