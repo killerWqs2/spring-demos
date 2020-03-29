@@ -11,7 +11,7 @@
     <groupId>org.killer</groupId>
     <artifactId>redis-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>redis-demo</name>
+    <name>spring-redis-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

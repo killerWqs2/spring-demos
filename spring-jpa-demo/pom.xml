@@ -11,7 +11,7 @@
     <groupId>org.killer</groupId>
     <artifactId>jpa-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jpa-demo</name>
+    <name>spring-jpa-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
