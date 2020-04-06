@@ -24,8 +24,8 @@ public class AdministratorService {
         administratorRepository.save(administrator);
     }
 
-    public Administrator loadUserByUsername(String username) {
-        return administratorRepository.findAdministratorByUsernameLike(username);
+    public Administrator loadAdministratorByPhone(String phone) {
+        return administratorRepository.findAdministratorByPhone(phone);
     }
 
 }

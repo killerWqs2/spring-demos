@@ -23,9 +23,9 @@ public interface AdministratorRepository extends CrudRepository<Administrator, I
 
 
     /**
-     * @param username 用户名
+     * @param phone 手机号
      * @return single administrator
      */
-    Administrator findAdministratorByUsernameLike(String username);
+    Administrator findAdministratorByPhone(String phone);
 
 }

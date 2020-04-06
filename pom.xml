@@ -21,6 +21,9 @@
         <module>spring-security-demo</module>
         <module>spring-jpa-demo</module>
         <module>spring-neo4j-demo</module>
+        <module>spring-mercy-demo</module>
+        <module>spring-cloud-zuul-demo</module>
+        <module>spring-dubbo-demo</module>
     </modules>
 
     <dependencies>
