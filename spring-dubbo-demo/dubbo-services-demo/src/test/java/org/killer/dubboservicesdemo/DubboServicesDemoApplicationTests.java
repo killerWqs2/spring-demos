@@ -1,10 +1,10 @@
-package org.killer.springdubbo;
+package org.killer.dubboservicesdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDubboApplicationTests {
+class DubboServicesDemoApplicationTests {
 
     @Test
     void contextLoads() {

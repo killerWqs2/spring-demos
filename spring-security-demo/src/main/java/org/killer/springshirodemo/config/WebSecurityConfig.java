@@ -1,6 +1,7 @@
 package org.killer.springshirodemo.config;
 
 import org.killer.springshirodemo.security.MyAuthenticationProvider;
+import org.killer.springshirodemo.security.MyAuthenticationSuccessHandler;
 import org.killer.springshirodemo.security.MyUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -50,8 +51,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // super.configure(http); 一直没搞明白，这么设置之后，为什么自动登录页面没有了？
         http.antMatcher("/security/*").authorizeRequests().antMatchers("/security/test").authenticated().antMatchers("/security/login").permitAll()
                 // ExceptionTranslatorFilter 主要是用来处理 ExpressionInterceptor 抛出来的异常, 其实我就好奇为什么默认的登录页面没有装载上去
-                .and().formLogin().loginProcessingUrl("/security/login").permitAll().successHandler().and().httpBasic().and().csrf().disable();
-
+                .and().formLogin().loginProcessingUrl("/security/login").permitAll().successHandler(new MyAuthenticationSuccessHandler())
+                .and().httpBasic().and().csrf().disable().rememberMe();
     }
 
 }

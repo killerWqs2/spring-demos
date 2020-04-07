@@ -1,13 +1,13 @@
-package org.killer.springdubbo;
+package org.killer.dubboconsumersdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringDubboApplication {
+public class DubboConsumersDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringDubboApplication.class, args);
+        SpringApplication.run(DubboConsumersDemoApplication.class, args);
     }
 
 }

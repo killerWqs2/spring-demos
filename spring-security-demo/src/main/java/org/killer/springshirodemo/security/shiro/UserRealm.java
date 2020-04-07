@@ -21,6 +21,9 @@ public class UserRealm extends AuthorizingRealm {
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+
+        // 这里可以自己获取认证信息，我真是有点疑惑， 这里到底是怎么回事呢？
+
         return null;
     }
 
