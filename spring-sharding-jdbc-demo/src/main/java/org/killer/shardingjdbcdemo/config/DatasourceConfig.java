@@ -78,6 +78,7 @@ public class DatasourceConfig {
         shardingRuleConfiguration.setTableRuleConfigs(Collections.singletonList(tableRuleConfiguration));
 
         return ShardingDataSourceFactory.createDataSource(dataSources, shardingRuleConfiguration, new Properties());
+
     }
 
 }

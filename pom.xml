@@ -26,6 +26,8 @@
         <module>spring-dubbo-demo</module>
         <module>spring-kafka-demo</module>
         <module>spring-sharding-jdbc-demo</module>
+        <module>spring-elastic-search-demo</module>
+        <module>spring-rocketmq-demo</module>
     </modules>
 
     <dependencies>
