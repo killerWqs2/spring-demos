@@ -22,7 +22,6 @@
         <module>spring-jpa-demo</module>
         <module>spring-neo4j-demo</module>
         <module>spring-mercy-demo</module>
-        <module>spring-cloud-zuul-demo</module>
         <module>spring-dubbo-demo</module>
         <module>spring-kafka-demo</module>
         <module>spring-sharding-jdbc-demo</module>
@@ -30,6 +29,7 @@
         <module>spring-rocketmq-demo</module>
         <module>spring-basic-jackson-demo</module>
         <module>spring-aop-demo</module>
+        <module>spring-mongo-demo</module>
     </modules>
 
     <dependencies>
