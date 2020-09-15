@@ -24,7 +24,7 @@ public class SpringMongoDemoApplication {
 
 	private static void test(MongoTemplate mongo) {
 		// querywarpper 有点怀念啊，，
-		List<User> users = mongo.find(new Query(Criteria.where("age").lt(23)).skip(2).limit(2), User.class);
+		List<User> users = mongo.find(new Query(Criteria.where("age").gt(23)).skip(2).limit(2), User.class);
 
 		System.out.println(users);
 
