@@ -13,4 +13,8 @@
         <property name="roleName" value="admin"/>
     </bean>
 
+    <bean id="boss" class="org.killer.springbasicjacksondemo.modules.test.entity.Boss" parent="user">
+        <property name="fat" value="true"/>
+    </bean>
+
 </beans>

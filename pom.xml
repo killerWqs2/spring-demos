@@ -30,6 +30,7 @@
         <module>spring-basic-jackson-demo</module>
         <module>spring-aop-demo</module>
         <module>spring-mongo-demo</module>
+        <module>spring-drools-demo</module>
     </modules>
 
     <dependencies>

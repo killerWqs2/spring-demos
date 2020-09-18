@@ -30,4 +30,9 @@ public class User {
 
     public interface UserInfo {}
 
+    // 内部类不能有静态申明, 应该是非静态内部类不能有静态方法，，因为类加载器加载的时候不回去加载非静态类，只有使用的时候才会加载，但是代码里面可以提前使用加载的静态方法，，
+    static class inner {
+        public static void test() {}
+    }
+
 }

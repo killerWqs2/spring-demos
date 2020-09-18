@@ -2,6 +2,7 @@ package org.killer.springbasicjacksondemo.modules.test.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.killer.springbasicjacksondemo.CommonResponse;
+import org.killer.springbasicjacksondemo.modules.test.entity.Role;
 import org.killer.springbasicjacksondemo.modules.test.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,10 @@ public class TestController {
         user.setName("wqs");
 
         return CommonResponse.success(user);
+    }
+
+    public static void main(String[] args) {
+        Role.inner.test();
     }
 
 }

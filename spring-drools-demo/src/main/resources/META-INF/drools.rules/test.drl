@@ -1,0 +1,25 @@
+package test
+
+import org.killer.springdroolsdemo.modules.test.entity.User
+
+rule "teenager"
+    no-loop false
+    lock-on-active true
+    salience 1
+    when
+        $s:User(age > 20)
+    then
+        $s.setTeenager(true);
+        update($s)
+end
+
+rule "level"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $s:User(salary > 5000)
+    then
+        $s.setLevel(1);
+        update($s)
+end
