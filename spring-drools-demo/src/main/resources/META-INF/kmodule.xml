@@ -2,8 +2,8 @@
 <kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://www.drools.org/xsd/kmodule">
 
-    <kbase name="point-rulesKB" packages="rules">
-        <ksession name="point-rulesKS"/>
+    <kbase name="point-rulesKB" packages="test">
+        <ksession name="point-rulesKS" type="stateless"/>
     </kbase>
 
 </kmodule>

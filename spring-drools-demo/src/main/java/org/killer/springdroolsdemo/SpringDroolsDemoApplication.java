@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.drools.core.impl.InternalKnowledgeBase;
 import org.drools.core.impl.KnowledgeBaseFactory;
 import org.drools.core.io.impl.ClassPathResource;
+import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.io.ResourceType;
 import org.kie.api.runtime.KieContainer;
@@ -23,7 +24,7 @@ public class SpringDroolsDemoApplication {
 //	}
 
 	public static void main(String[] args) {
-		manualConfig();
+//		manualConfig();
 
 		xmlConfig();
 	}
@@ -53,9 +54,15 @@ public class SpringDroolsDemoApplication {
 		KieServices kieServices = KieServices.get();
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 
-		StatelessKieSession statelessKieSession = kieContainer.newStatelessKieSession();
+		KieBase kieBase = kieContainer.getKieBase("point-rulesKB");
+		StatelessKieSession statelessKieSession = kieContainer.newStatelessKieSession("point-rulesKS");
+
+		// 可以用来设置全局变量在规则中使用，，有点东西，，
+		statelessKieSession.setGlobal("switch", "open");
 		User user = new User().setAge(25).setSalary(8000f);
 		statelessKieSession.execute(user);
+
+		System.out.println(user);
 	}
 
 }
