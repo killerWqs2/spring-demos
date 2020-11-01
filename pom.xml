@@ -31,7 +31,6 @@
         <module>spring-aop-demo</module>
         <module>spring-mongo-demo</module>
         <module>spring-drools-demo</module>
-        <module>spring-mercy-demo/ioc-demo</module>
     </modules>
 
     <dependencies>

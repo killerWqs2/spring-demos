@@ -4,8 +4,14 @@ import com.fasterxml.jackson.annotation.JsonView;
 import org.killer.springbasicjacksondemo.CommonResponse;
 import org.killer.springbasicjacksondemo.modules.test.entity.Role;
 import org.killer.springbasicjacksondemo.modules.test.entity.User;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URLEncoder;
 
 /**
  * @author killer
@@ -28,6 +34,28 @@ public class TestController {
 
     public static void main(String[] args) {
         Role.inner.test();
+    }
+
+    @GetMapping("download")
+    public void download(HttpServletResponse response) throws IOException {
+
+        ClassPathResource template = new ClassPathResource("template\\模板1.xlsx");
+
+        response.setContentType("application/force-download");
+        response.setHeader("Content-Disposition", "attachment; filename="+ template.getFile().getName());
+
+        InputStream inputStream = template.getInputStream();
+
+        byte[] buffer = new byte[1024];
+
+        int length = 0;
+        while ((length = inputStream.read(buffer)) != -1) {
+            response.getOutputStream().write(buffer, 0, length);
+        }
+
+        response.getOutputStream().flush();
+        response.getOutputStream().close();
+
     }
 
 }
